@@ -144,12 +144,13 @@ class VoiceRecorderApp(QWidget):
         if not self.recording:
             self.start_recording()
         else:
-            self.th1=threading.Thread(target=self.stop_recording)
-            self.th2=threading.Thread(target=self.recognize)
-            self.th1.start()
-            self.th2.start()
-            self.th1.join()
-            # self.stop_recording()
+            # self.th1=threading.Thread(target=self.stop_recording)
+            # self.th2=threading.Thread(target=self.recognize)
+            # self.th1.start()
+            # self.th2.start()
+            # self.th1.join()
+        
+            self.stop_recording()
 
     def start_recording(self):
         self.audio_frames = []
@@ -190,6 +191,8 @@ class VoiceRecorderApp(QWidget):
         self.audio_stream.close()
 
         self.save_audio()
+        self.recognize()
+        
     #-------------------------- : this is for adding rounded corners to the window
         # self.label_status.setText('Running Speech Recognition...')
         # self.label_status.setStyleSheet("QLabel { color: black; }")
@@ -355,8 +358,8 @@ if __name__ == "__main__":
     channel = 3 # Only valid for my system. Change it to 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10 according to your system.
     # UnComment when needed
 
-    # environment_checker = EnvironmentChecker()
-    # environment_checker.check_environment(channel)
+    environment_checker = EnvironmentChecker()
+    environment_checker.check_environment(channel)
     app = QApplication([])
     main_app = VoiceRecorderApp(channel)
     main_app.show()
