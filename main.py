@@ -190,7 +190,7 @@ class VoiceRecorderApp(QWidget):
         self.audio_stream.close()
 
         self.save_audio()
-    #--------------------------
+    #-------------------------- : this is for adding rounded corners to the window
         # self.label_status.setText('Running Speech Recognition...')
         # self.label_status.setStyleSheet("QLabel { color: black; }")
         # self.label_status.setText("-{0}-".format(self.convert_audio_to_text("recorded_audio.wav")))
