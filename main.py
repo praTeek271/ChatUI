@@ -13,7 +13,7 @@ from pydub import AudioSegment
 import speech_recognition as sr
 
 class VoiceRecorderApp(QWidget):
-     """
+    '''
     A class representing a voice recorder application.
 
     Attributes:
@@ -36,7 +36,7 @@ class VoiceRecorderApp(QWidget):
         recognize(): Runs speech recognition on the recorded audio.
         save_audio(): Saves the recorded audio to a WAV file.
         convert_audio_to_text(file_path): Converts audio to text using speech recognition.
-    """
+    '''
     def __init__(self, channel=1):
         self.printME()
         super().__init__()
@@ -121,6 +121,19 @@ class VoiceRecorderApp(QWidget):
             sys.exit()
 
     def set_mask(self):
+        """
+        Sets a rounded rectangular mask for the widget.
+
+        This method creates a QPainterPath object and adds a rounded rectangle to it.
+        The rounded rectangle is defined by the widget's rectangle and the specified corner radius.
+        Then, a QRegion object is created from the filled polygon of the QPainterPath.
+        Finally, the mask of the widget is set to the created QRegion.
+
+        Note: This method assumes that the widget is a subclass of QWidget.
+
+        Returns:
+            None
+        """
         path = QPainterPath()
         path.addRoundedRect(QRectF(self.rect()), 10, 10, mode=Qt.AbsoluteSize)
 
@@ -185,7 +198,7 @@ class VoiceRecorderApp(QWidget):
     def recognize(self):
         self.label_status.setText('Running Speech Recognition...')
         self.label_status.setStyleSheet("QLabel { color: black; }")
-        self.label_status.setText("-{0}-".format(self.convert_audio_to_text("recorded_audio.wav")))
+        self.label_status.setText("{0}".format(self.convert_audio_to_text("recorded_audio.wav")))
 
     def save_audio(self):
         output_filename = 'recorded_audio.wav'
