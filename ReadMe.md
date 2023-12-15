@@ -1,8 +1,10 @@
 # ChatUI ☁👨‍🎤🚀🤘🤘
 
-<img src="https://github.com/praTeek271/ChatUI/blob/16470950f2f675af010149861cdd79a934f80eb5/__pycache__/chatui.gif" alt="Chat_gif">
-<img src="https://github.com/praTeek271/ChatUI/blob/main/__pycache__/chatui.gif" alt="Chat_gif">
+<img src="https://github.com/praTeek271/ChatUI/blob/16470950f2f675af010149861cdd79a934f80eb5/__pycache__/chatui.gif" alt="chat_app_gif">
 
+<img src="https://github.com/praTeek271/ChatUI/blob/main/__pycache__/chatui.gif" alt="chat_app_gif">
+
+![chat_app_gif](https://github.com/praTeek271/ChatUI/blob/16470950f2f675af010149861cdd79a934f80eb5/__pycache__/chatui.gif)
 ## Overview
 
 The ChatUI App is a versatile audio recording application designed for ease of use and efficiency. With a clean interface and robust functionality, users can effortlessly capture audio, receive real-time status updates, and even transcribe recorded content using built-in speech recognition.
