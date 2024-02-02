@@ -1,6 +1,7 @@
 # ChatUI ☁👨‍🎤🚀🤘🤘
 
-![App Screenshot](path/to/screenshot.png)
+<img src="https://github.com/praTeek271/ChatUI/blob/e961deaa0405a11f6b8ac2bac7201f0538feb9b2/__pycache__/chat_UI.gif" alt="chat_app_gif">
+
 
 ## Overview
 
