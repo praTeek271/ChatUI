@@ -20,4 +20,4 @@ This Repo consists of the following files :
 <br>
 
 
--  created by prateek
+- uses os module
